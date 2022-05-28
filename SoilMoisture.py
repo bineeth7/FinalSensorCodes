@@ -2,8 +2,8 @@
 import spidev # To communicate with SPI devices
 from numpy import interp  # To scale values
 from time import sleep  # To add delay
-from firebase import firebase
-FBConn=firebase.FirebaseApplication("https://sensor-readings-142b2.firebaseio.com/")
+#from firebase import firebase
+#FBConn=firebase.FirebaseApplication("https://sensor-readings-142b2.firebaseio.com/")
 
 
 # Start SPI connection
@@ -25,4 +25,4 @@ while True:
   output=str(output)
   output=output + " %"
   print(output)
-  FBConn.put('https://sensor-readings-142b2.firebaseio.com',"Moisture",output)
+  #FBConn.put('https://sensor-readings-142b2.firebaseio.com',"Moisture",output)
