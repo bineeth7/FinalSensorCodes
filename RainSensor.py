@@ -19,7 +19,7 @@ def analogInput(channel):
 
 while True:
   output = analogInput(0) # Reading from CH0
-  output = interp(output, [270, 1023], [100, 0])
+  output = interp(output, [224, 1023], [100, 0])
   output=int(output)
   print("Moisture:", output)
   output=str(output)
