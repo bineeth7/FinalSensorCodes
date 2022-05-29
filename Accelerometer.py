@@ -5,11 +5,11 @@
 import time
 
 # Import the ADXL345 module.
-import Adafruit_ADXL345
+import Adafruit_ADXL3008
 
 
 # Create an ADXL345 instance.
-accel = Adafruit_ADXL345.ADXL345()
+accel = Adafruit_ADXL3008.ADXL3008()
 
 # Alternatively you can specify the device address and I2C bus with parameters:
 #accel = Adafruit_ADXL345.ADXL345(address=0x54, busnum=2)
