@@ -1,7 +1,8 @@
 # Importing modules
 import spidev # To communicate with SPI devices
 from numpy import interp  # To scale values
-from time import sleep  # To add delay
+#from time import sleep  # To add delay
+import time
 #from firebase import firebase
 #FBConn=firebase.FirebaseApplication("https://sensor-readings-142b2.firebaseio.com/")
 # Start SPI connection
@@ -22,4 +23,4 @@ while True:
   output1=str(output1) #soil
   print("Rainfall:", output) #rain
   print("Moisture:", output1) #soil
-  time.sleep(0.5)
+  time.sleep(1)
