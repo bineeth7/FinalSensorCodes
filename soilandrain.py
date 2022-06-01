@@ -16,18 +16,18 @@ def analogInput(channel):
 while True:
   output = analogInput(0) # Reading from CH0
   output1 = analogInput(1) # Reading from CH1
-  output = interp(output, [224, 1023], [100, 0])
-  output1 = interp(output1, [270, 1023], [100, 0])
-  output=int(output)
-  output1=int(output1)
-  print("Rainfall:", output)
-  print("Moisture:", output1)
-  output=str(output)
-  output1=str(output1)
-  output=output + " %"
-  output1=output1 + " %"
+  output = interp(output, [224, 1023], [100, 0]) #rain
+  output1 = interp(output1, [270, 1023], [100, 0]) #soil
+  output=int(output) #rain
+  output1=int(output1) #soil
+  print("Rainfall:", output) #rain
+  print("Moisture:", output1) #soil
+  output=str(output) #rain
+  output1=str(output1) #soil
+ # output=output + " %" #rain
+ # output1=output1 + " %" #soil
   print(output)
-  print(output1)
+  print(output1) #soil
   #FBConn.put('https://sensor-readings-142b2.firebaseio.com',"Moisture",output)
   #soil mositure code
 # Importing modules
