@@ -21,7 +21,7 @@ while True:
   output = analogInput(0) # Reading from CH0
   output = interp(output, [224, 1023], [100, 0])
   output=int(output)
-  print("Moisture:", output)
+  print("Rainfall:", output)
   output=str(output)
   output=output + " %"
   print(output)
