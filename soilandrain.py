@@ -18,14 +18,14 @@ while True:
   output1 = analogInput(1) # Reading from CH1
   output = interp(output, [224, 1023], [100, 0]) #rain
   output1 = interp(output1, [270, 1023], [100, 0]) #soil
-  output=int(output) #rain
-  output1=int(output1) #soil
-  print("Rainfall:", output) #rain
-  print("Moisture:", output1) #soil
   output=str(output) #rain
   output1=str(output1) #soil
- # output=output + " %" #rain
- # output1=output1 + " %" #soil
+  print("Rainfall:", output) #rain
+  print("Moisture:", output1) #soil
+ #output=str(output) #rain
+ #output1=str(output1) #soil
+ #output=output + " %" #rain
+ #output1=output1 + " %" #soil
   print(output)
   print(output1) #soil
   #FBConn.put('https://sensor-readings-142b2.firebaseio.com',"Moisture",output)
