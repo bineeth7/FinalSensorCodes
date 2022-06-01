@@ -26,8 +26,8 @@ while True:
  #output1=str(output1) #soil
  #output=output + " %" #rain
  #output1=output1 + " %" #soil
-  print(output)
-  print(output1) #soil
+ #print(output)
+ #print(output1) #soil
   #FBConn.put('https://sensor-readings-142b2.firebaseio.com',"Moisture",output)
   #soil mositure code
 # Importing modules
