@@ -31,11 +31,11 @@ while True:
 
 # Importing modules
 
-import spidev # To communicate with SPI devices
+# import spidev # To communicate with SPI devices
 
-from numpy import interp  # To scale values
+# from numpy import interp  # To scale values
 
-from time import sleep  # To add delay
+# from time import sleep  # To add delay
 
 #from firebase import firebase
 
@@ -43,9 +43,9 @@ from time import sleep  # To add delay
 
 # Start SPI connection
 
-spi=spidev.SpiDev() # Created an object
+# spi=spidev.SpiDev() # Created an object
 
-spi.open(0,0) 
+# spi.open(0,0) 
 
 # Read MCP3008 data
 
@@ -61,7 +61,7 @@ def analogInput(channel):
 
 while True:
 
-  output = analogInput(0) # Reading from CH0
+  output = analogInput(1) # Reading from CH0
 
   output = interp(output, [270, 1023], [100, 0])
 
