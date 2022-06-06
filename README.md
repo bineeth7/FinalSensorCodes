@@ -1,8 +1,8 @@
 # FinalSensorCodes
 Soil Moisture and Rain Sensor Interfacing [VCC : 5V]
-<img src="https://camo.githubusercontent.com/..." data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png](https://user-images.githubusercontent.com/47277153/170809213-e0fb9192-a4b0-45f4-a462-c117dbf5d9ba.png" width="200" height="400" />
+<img src="https://camo.githubusercontent.com/..." data-canonical-src="https://gyazo.com/eb5c5741b6a9a16c692170a41a49c858.png](https://user-images.githubusercontent.com/47277153/170809213-e0fb9192-a4b0-45f4-a462-c117dbf5d9ba.png](https://user-images.githubusercontent.com/47277153/170809213-e0fb9192-a4b0-45f4-a462-c117dbf5d9ba.png" width="200" height="400" />
 
-![SoilMoistureInterfacing](https://user-images.githubusercontent.com/47277153/170809213-e0fb9192-a4b0-45f4-a462-c117dbf5d9ba.png)
+![SoilMoistureInterfacing](
 
 
 Accelerometer Interfacing [VCC : 3.3V]★ (only change is vcc)
