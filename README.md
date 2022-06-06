@@ -11,4 +11,4 @@ Accelerometer Interfacing [VCC : 3.3V]★ (only change is vcc)
 
 Raspberry Pi 3B Pin Layout
 
-<img src="https://github.com/bineeth7/FinalSensoCodes/blob/main/raspi3bpinlayout.png" width="700" height="700" />
+<img src="[https://github.com/bineeth7/FinalSensoCodes/blob/main/raspi3bpinlayout.png](https://github.com/bineeth7/FinalSensorCodes/blob/main/raspi3bpinlayout.png)" width="700" height="700" />
