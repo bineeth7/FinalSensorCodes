@@ -38,4 +38,4 @@ while True:
   print("Rainfall:", output) #rain
   print("Moisture:", output1) #soil
   ml([output, output1, 0])
-  time.sleep(1)
+  time.sleep(0)
