@@ -3,6 +3,20 @@ import spidev # To communicate with SPI devices
 from numpy import interp  # To scale values
 #from time import sleep  # To add delay
 import time
+#ML training
+from sklearn import svm
+from sklearn.svm import SVC
+import pandas as pd
+
+def ml(values):
+    data = pd.read_csv('test.csv')
+    x=data.drop(columns=('status'))
+    y=data['status']
+    clf = svm.SVC()
+    clf.fit(x,y)
+    p = clf.predict([values])
+    print("called")
+    print(p)
 #from firebase import firebase
 #FBConn=firebase.FirebaseApplication("https://sensor-readings-142b2.firebaseio.com/")
 # Start SPI connection
@@ -23,4 +37,5 @@ while True:
   output1=str(output1) #soil
   print("Rainfall:", output) #rain
   print("Moisture:", output1) #soil
+  ml([output, output1, 0])
   time.sleep(1)
