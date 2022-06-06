@@ -7,4 +7,4 @@ Accelerometer Interfacing [VCC : 3.3V]★ (only change is vcc)
 ![AccelerometerInterfacing](https://user-images.githubusercontent.com/47277153/170820400-d3c425dd-ffbd-46f2-acac-c50dd3b0722a.png)
 
 Raspberry Pi 3B Pin Layout
-![raspi3bpinlayout](https://user-images.githubusercontent.com/47277153/172199540-5271b581-8b5f-4e7a-b435-ca227696ced1.png)
+![raspi3bpinlayout](https://user-images.githubusercontent.com/47277153/172199971-45a038ac-2086-4f28-908c-14611e0bd849.png)
