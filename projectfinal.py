@@ -35,6 +35,7 @@ while True:
   output1 = interp(output1, [270, 1023], [100, 0]) #soil
   output=str(output) #rain
   output1=str(output1) #soil
+  output2=str(output2) #vibration
   print("Rainfall:", output) #rain
   print("Moisture:", output1) #soil
   ml([output, output1, 0])
