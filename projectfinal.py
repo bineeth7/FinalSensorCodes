@@ -17,8 +17,8 @@ def ml(values):
     p = clf.predict([values])
     print("called")
     print(p)
-#from firebase import firebase
-#FBConn=firebase.FirebaseApplication("https://sensor-readings-142b2.firebaseio.com/")
+from firebase import firebase
+FBConn=firebase.FirebaseApplication("https://console.firebase.google.com/u/2/project/raspberrypi-ade35/database/raspberrypi-ade35-default-rtdb/data/~2F/")
 # Start SPI connection
 spi=spidev.SpiDev() # Created an object
 spi.open(0,0) 
