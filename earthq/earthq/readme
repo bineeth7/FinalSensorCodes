@@ -1,0 +1,7 @@
+in the project directory
+# for first time
+pip install pipenv
+pipenv install
+# then every time
+pipenv shell
+python manage.py runserver
