@@ -31,15 +31,16 @@ def analogInput(channel):
   return data
 while True:
   output = analogInput(0) # Reading from CH0 rainfall
-#  output1 = analogInput(1) # Reading from CH1 vibration
+  output1 = 0#analogInput(1) # Reading from CH1 vibration
   output2 = analogInput(2) # Reading from CH2 moisture
   output = interp(output, [224, 1023], [100, 0]) #rain
-#  output1 = interp(output1, [224, 1023], [100, 0]) #vibration
+  output1 = interp(output1, [224, 1023], [100, 0]) #vibration
   output2 = interp(output2, [270, 1023], [100, 0]) #soil
   output=str(output) #rain
+  output1=str(output1) #vibration
   output2=str(output2) #soil
   print("Rainfall:", output) #rain
-#  print("Vibration:",output1) #vibration
+  print("Vibration:",output1) #vibration
   print("Moisture:", output2) #soil
-  ml([output, 0, output2])
+  ml([output, output1, output2])
   time.sleep(0)
