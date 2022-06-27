@@ -17,6 +17,7 @@ def ml(values):
     p = clf.predict([values])
     print("called")
     print(p)
+    
 from firebase import firebase
 FBConn=firebase.FirebaseApplication("https://console.firebase.google.com/u/2/project/raspberrypi-ade35/database/raspberrypi-ade35-default-rtdb/data/~2F/")
 # Start SPI connection
@@ -29,13 +30,16 @@ def analogInput(channel):
   data = ((adc[1]&3) << 8) + adc[2]
   return data
 while True:
-  output = analogInput(0) # Reading from CH0
-  output1 = analogInput(1) # Reading from CH1
+  output = analogInput(0) # Reading from CH0 rainfall
+#  output1 = analogInput(1) # Reading from CH1 vibration
+  output2 = analogInput(2) # Reading from CH2 moisture
   output = interp(output, [224, 1023], [100, 0]) #rain
-  output1 = interp(output1, [270, 1023], [100, 0]) #soil
+#  output1 = interp(output1, [224, 1023], [100, 0]) #vibration
+  output2 = interp(output2, [270, 1023], [100, 0]) #soil
   output=str(output) #rain
   output1=str(output1) #soil
   print("Rainfall:", output) #rain
-  print("Moisture:", output1) #soil
-  ml([output, output1, 0])
+  print("Vibration:",output1) #vibration
+  print("Moisture:", output2) #soil
+  ml([output, 0, output2])
   time.sleep(0)
