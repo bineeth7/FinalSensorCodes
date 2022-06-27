@@ -34,7 +34,7 @@ while True:
   output1 = 0#analogInput(1) # Reading from CH1 vibration
   output2 = analogInput(2) # Reading from CH2 moisture
   output = interp(output, [224, 1023], [100, 0]) #rain
-  output1 = interp(output1, [224, 1023], [100, 0]) #vibration
+  output1 = interp(output1, [0, 0], [0, 0]) #vibration
   output2 = interp(output2, [270, 1023], [100, 0]) #soil
   output=str(output) #rain
   output1=str(output1) #vibration
