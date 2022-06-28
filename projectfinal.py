@@ -7,6 +7,8 @@ import time
 from sklearn import svm
 from sklearn.svm import SVC
 import pandas as pd
+import requests
+import json
 
 def ml(values):
     data = pd.read_csv('test.csv')
@@ -16,11 +18,11 @@ def ml(values):
     clf.fit(x,y)
     p = clf.predict([values])
     print("called")
-    print(p)
+    return(p)
     
-from firebase import firebase
-FBConn=firebase.FirebaseApplication("https://console.firebase.google.com/u/2/project/raspberrypi-ade35/database/raspberrypi-ade35-default-rtdb/data/~2F/")
-# Start SPI connection
+# from firebase import firebase
+# FBConn=firebase.FirebaseApplication("https://console.firebase.google.com/u/2/project/raspberrypi-ade35/database/raspberrypi-ade35-default-rtdb/data/~2F/")
+# # Start SPI connection
 spi=spidev.SpiDev() # Created an object
 spi.open(0,0) 
 # Read MCP3008 data
@@ -42,5 +44,20 @@ while True:
   print("Rainfall:", output) #rain
   print("Vibration:",output1) #vibration
   print("Moisture:", output2) #soil
-  ml([output, output1, output2])
+  status = ml([output, output1, output2])
+  print(status)
+  url = "https://earthq1.herokuapp.com/api/v0/Data/"
+
+  payload = json.dumps({
+    "rainfall": output,
+    "vibration": output1,
+    "moisture": output2,
+    "status": status
+  })
+  headers = {
+    'Content-Type': 'application/json'
+  }
+
+  response = requests.request("POST", url, headers=headers, data=payload)
+
   time.sleep(0)
