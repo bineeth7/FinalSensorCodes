@@ -11,7 +11,7 @@ import pandas as pd
 
 #import firebase
 #import pyrebase
-import Adafruit_DHT
+import Adafruit_Python_DHT
 import urllib3, urllib, httplib2
 import json
 import os 
