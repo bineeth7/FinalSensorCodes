@@ -8,6 +8,30 @@ from sklearn import svm
 from sklearn.svm import SVC
 import pandas as pd
 
+
+#import firebase
+#import pyrebase
+import Adafruit_DHT
+import urllib3, urllib, httplib2
+import json
+import os 
+from functools import partial
+
+#config = {
+  #  "apiKey": "ccbyTCko8khKenmotX3hdKaKMhgMmd1kRD35EHkY",
+   # "authDomain": "proj1-88a23.firebaseapp.com",
+  #  "databaseURL": "https://proj1-88a23-default-rtdb.firebaseio.com/",
+ #   "projectId": "proj1-88a23",
+#    "storageBucket": "proj1-88a23.appspot.com",
+#};
+ 
+from firebase import firebase
+url = 'https://console.firebase.google.com/u/2/project/projectfinal-83cc0/database/projectfinal-83cc0-default-rtdb/data/~2F'
+firebase = firebase.FirebaseApplication(url)
+#firebase = pyrebase.initialize_app(config)
+ 
+
+
 def ml(values):
     data = pd.read_csv('test.csv')
     x=data.drop(columns=('status'))
