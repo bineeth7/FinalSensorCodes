@@ -8,7 +8,7 @@ from sklearn import svm
 from sklearn.svm import SVC
 import pandas as pd
 
-
+import RPi.GPIO as GPIO
 #import firebase
 #import pyrebase
 import Adafruit_Python_DHT
