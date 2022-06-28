@@ -31,6 +31,13 @@ firebase = firebase.FirebaseApplication(url)
 #firebase = pyrebase.initialize_app(config)
  
 
+GPIO.setmode(GPIO.BCM)
+#GPIO.cleanup()
+GPIO.setwarnings(False)
+
+# Sensor should be set to Adafruit_DHT.DHT11,
+# Adafruit_DHT.DHT22, or Adafruit_DHT.AM2302.
+sensor = Adafruit_DHT.DHT11
 
 def ml(values):
     data = pd.read_csv('test.csv')
