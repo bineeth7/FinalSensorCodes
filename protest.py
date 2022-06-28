@@ -40,7 +40,7 @@ GPIO.setwarnings(False)
 
 # Sensor should be set to Adafruit_DHT.DHT11,
 # Adafruit_DHT.DHT22, or Adafruit_DHT.AM2302.
-sensor = Adafruit_Python_DHT.DHT11
+sensor = Adafruit_Python_DHT.DHT
 
 output, output1, output2 = Adafruit_Python_DHT.read_retry(sensor, pin)
 
@@ -54,8 +54,11 @@ def ml(values):
     print("called")
     print(p)
     
-from firebase import firebase
-FBConn=firebase.FirebaseApplication("https://console.firebase.google.com/u/2/project/raspberrypi-ade35/database/raspberrypi-ade35-default-rtdb/data/~2F/")
+
+#from firebase import firebase
+#FBConn=firebase.FirebaseApplication("https://console.firebase.google.com/u/2/project/raspberrypi-ade35/database/raspberrypi-ade35-default-rtdb/data/~2F/")
+
+
 # Start SPI connection
 spi=spidev.SpiDev() # Created an object
 spi.open(0,0) 
