@@ -48,7 +48,7 @@ while True:
   print(status)
   url = "https://earthq1.herokuapp.com/api/v0/Data/"
 
-  payload = json.dumps({
+  payload = json.dump({
     "rainfall": output,
     "vibration": output1,
     "moisture": output2,
