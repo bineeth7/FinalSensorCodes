@@ -51,7 +51,7 @@ def ml(values):
     clf = svm.SVC()
     clf.fit(x,y)
     p = clf.predict([values])
-    print("called")
+   # print("called")
     print(p)
     
 
